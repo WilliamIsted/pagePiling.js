@@ -597,7 +597,9 @@
 
                 var averageEnd = getAverage(scrollings, 10);
                 var averageMiddle = getAverage(scrollings, 70);
-                var isAccelerating = averageEnd >= averageMiddle;
+                var isAccelerating = averageEnd > averageMiddle;
+
+                console.log( isAccelerating, isScrollingVertically );
 
                 if(isAccelerating && isScrollingVertically){
 	                //scrolling down?
